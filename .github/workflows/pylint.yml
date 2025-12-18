@@ -21,3 +21,8 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+    - name: Run tests with coverage
+      run: |
+        coverage run test.py
+        coverage report
+        
